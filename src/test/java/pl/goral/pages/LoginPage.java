@@ -1,7 +1,6 @@
 package pl.goral.pages;
 
 import lombok.Getter;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,10 +9,10 @@ import pl.goral.config.ConfigProvider;
 
 public class LoginPage extends BasePage {
 
-    @FindBy(name = "username")
+    @FindBy(id = "username")
     private WebElement usernameInput;
 
-    @FindBy(name = "password")
+    @FindBy(id = "password")
     private WebElement passwordInput;
 
     @FindBy(xpath = "//button[@type='submit' and contains(text(), 'Sign in')]")
@@ -22,10 +21,12 @@ public class LoginPage extends BasePage {
     @Getter
     private final Toast toast;
 
+
     public LoginPage(WebDriver driver) {
         super(driver);
         toast = new Toast(driver);
     }
+
     public LoginPage openPage() {
         driver.get(ConfigProvider.get("frontend.url"));
         return this;
