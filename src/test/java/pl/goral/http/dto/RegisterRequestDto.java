@@ -1,4 +1,4 @@
-package pl.goral.dto;
+package pl.goral.http.dto;
 
 import lombok.Builder;
 import lombok.Data;

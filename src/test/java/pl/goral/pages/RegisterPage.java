@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pl.goral.components.Toast;
 import pl.goral.config.ConfigProvider;
-import pl.goral.dto.RegisterRequestDto;
+import pl.goral.http.dto.RegisterRequestDto;
 
 public class RegisterPage extends BasePage {
 
