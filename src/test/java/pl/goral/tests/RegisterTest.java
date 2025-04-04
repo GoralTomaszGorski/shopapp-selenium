@@ -2,7 +2,7 @@ package pl.goral.tests;
 
 import org.junit.jupiter.api.Test;
 import pl.goral.SeleniumTest;
-import pl.goral.dto.RegisterRequestDto;
+import pl.goral.http.dto.RegisterRequestDto;
 import pl.goral.pages.LoginPage;
 import pl.goral.pages.RegisterPage;
 

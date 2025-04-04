@@ -3,8 +3,8 @@ package pl.goral.generators;
 
 import lombok.experimental.UtilityClass;
 import net.datafaker.Faker;
-import pl.goral.dto.RegisterRequestDto;
-import pl.goral.dto.Roles;
+import pl.goral.http.dto.RegisterRequestDto;
+import pl.goral.http.dto.Roles;
 
 import java.util.List;
 
