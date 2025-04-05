@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pl.goral.components.Toast;
+import pl.goral.pages.components.Toast;
 import pl.goral.config.ConfigProvider;
 
 public class LoginPage extends BasePage {

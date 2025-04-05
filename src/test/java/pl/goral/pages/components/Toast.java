@@ -1,4 +1,4 @@
-package pl.goral.components;
+package pl.goral.pages.components;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
