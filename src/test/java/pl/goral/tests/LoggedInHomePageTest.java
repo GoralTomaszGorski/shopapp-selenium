@@ -31,7 +31,10 @@ public class LoggedInHomePageTest extends SeleniumTest {
 
     @Test
     public void shouldLogOutSuccessfully() {
-        driver.quit();
+        new LoggedInHomePage(driver)
+                .getLoggedInHeader()
+                .clickLogout()
+                .verifyLoginUrl();
     }
 
     @Test
