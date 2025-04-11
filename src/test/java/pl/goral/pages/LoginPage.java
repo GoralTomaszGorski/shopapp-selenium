@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pl.goral.pages.components.Toast;
 import pl.goral.config.ConfigProvider;
 
@@ -37,5 +38,9 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password);
         signInButton.click();
         return getInstance(expectedPage);
+    }
+
+    public void verifyLoginUrl() {
+        wait.until(ExpectedConditions.urlContains("/login"));
     }
 }
