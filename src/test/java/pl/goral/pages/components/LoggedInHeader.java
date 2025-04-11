@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pl.goral.pages.BasePage;
+import pl.goral.pages.LoginPage;
 import pl.goral.pages.ProfilePage;
 
 public class LoggedInHeader extends BasePage {
@@ -18,5 +19,11 @@ public class LoggedInHeader extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText(name)));
         driver.findElement(By.linkText(name)).click();
         return new ProfilePage(driver);
+    }
+
+    public LoginPage clickLogout() {
+        wait.until(driver -> driver.findElements(By.cssSelector("nav button")).size() == 2);
+        driver.findElements(By.cssSelector("nav button")).getFirst().click();
+        return new LoginPage(driver);
     }
 }
