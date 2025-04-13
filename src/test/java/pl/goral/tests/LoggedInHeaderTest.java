@@ -22,5 +22,19 @@ public class LoggedInHeaderTest extends LoggedInSeleniumTest {
                 .verifyLoginUrl();
     }
 
+    @Test
+    public void shouldOpenProfilePage() {
+        new LoggedInHomePage(driver)
+                .getLoggedInHeader()
+                .clickOnName(user.getFirstName(), user.getLastName())
+                .verifyPersonalInformation(user);
+    }
 
+    @Test
+    public void shouldOpenQrPage() {
+        new LoggedInHomePage(driver)
+                .getLoggedInHeader()
+                .clickOnLink("QR Code", QrPage.class)
+                .verifyIsLoaded();
+    }
 }
