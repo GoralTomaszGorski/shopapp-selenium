@@ -26,4 +26,10 @@ public class LoggedInHeader extends BasePage {
         driver.findElements(By.cssSelector("nav button")).getFirst().click();
         return new LoginPage(driver);
     }
+
+    public <T extends BasePage> T clickOnLink(String link, Class<T> expectedPage) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.linkText(link)));
+        driver.findElement(By.linkText(link)).click();
+        return getInstance(expectedPage);
+    }
 }
