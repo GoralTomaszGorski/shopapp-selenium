@@ -52,7 +52,7 @@ public class ScreenshotTakerExtension implements AfterTestExecutionCallback {
         String className = context.getRequiredTestClass().getSimpleName();
         String methodName = context.getRequiredTestMethod().getName();
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        return String.format("%s_%s_%s.png", className, methodName, timestamp);
+        return String.format("%s_%s_%s.jpg", className, methodName, timestamp);
     }
 
     private void ensureTheScreenshotDirectoryExists(Path screenshotDir) throws IOException {
