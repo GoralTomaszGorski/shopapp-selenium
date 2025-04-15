@@ -18,7 +18,7 @@ public class LoginApi extends BaseApi {
     @SneakyThrows
     public static String login(String username, String password) {
 
-        LoginRequestDto loginRequestDto = getLoginRequestDto(get("credentials.email"), get("credentials.email"));
+        LoginRequestDto loginRequestDto = getLoginRequestDto(username, password);
         String body = getObjectMapper().writeValueAsString(loginRequestDto);
 
         Request request = new Request.Builder()

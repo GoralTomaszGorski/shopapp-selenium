@@ -14,17 +14,8 @@ import static pl.goral.generators.UserGenerator.getRandomUser;
 
 public class LoggedInHeaderTest extends LoggedInSeleniumTest {
 
-    String token;
-    RegisterRequestDto user;
-
     @BeforeEach
     public void setUp() {
-        user = getRandomUser();
-        RegisterApi.register(user);
-        token = LoginApi.login(user.getUsername(), user.getPassword());
-
-        driver.get(ConfigProvider.get("frontend.url"));
-        driver.executeScript("window.localStorage.setItem('token', arguments[0]);", token);
         driver.navigate().to(ConfigProvider.get("frontend.url"));
     }
 
