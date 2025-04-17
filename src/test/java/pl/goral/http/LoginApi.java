@@ -16,6 +16,7 @@ public class LoginApi extends BaseApi {
 
     @SneakyThrows
     public static String login(String username, String password) {
+
         LoginRequestDto loginRequestDto = getLoginRequestDto(username, password);
         String body = getObjectMapper().writeValueAsString(loginRequestDto);
 
