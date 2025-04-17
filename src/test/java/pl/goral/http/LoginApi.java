@@ -8,7 +8,6 @@ import pl.goral.http.dto.LoginRequestDto;
 import pl.goral.http.dto.LoginResponseDto;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static pl.goral.config.ConfigProvider.get;
 import static pl.goral.http.ObjectMapperProvider.getObjectMapper;
 
 public class LoginApi extends BaseApi {
