@@ -32,5 +32,9 @@ public class ProductsPage extends BasePage {
         return ThreadLocalRandom.current().nextInt(upperBoundExclusive);
     }
 
-
+    public void verifyButtonsChanged(int productIndex) {
+        WebElement productCard = driver.findElements(PRODUCT_CARD).get(productIndex);
+        wait.until(driver -> productCard.findElement(By.xpath("//button[text()='Remove']")));
+        wait.until(driver -> productCard.findElement(By.xpath("//button[text()='Update Cart']")));
+    }
 }

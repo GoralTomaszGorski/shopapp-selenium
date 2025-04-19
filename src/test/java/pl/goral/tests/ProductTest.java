@@ -20,7 +20,8 @@ public class ProductTest extends LoggedInSeleniumTest {
                 .verifyIsLoaded()
                 .addRandomProductToBasketAndReturnItsIndex();
 
-
+        productsPage
+                .verifyButtonsChanged(productIndex);
 
         driver.quit();
     }
