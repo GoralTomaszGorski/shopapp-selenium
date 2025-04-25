@@ -4,13 +4,8 @@ package pl.goral.tests;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.goral.config.ConfigProvider;
-import pl.goral.http.LoginApi;
-import pl.goral.http.RegisterApi;
-import pl.goral.http.dto.RegisterRequestDto;
 import pl.goral.pages.LoggedInHomePage;
 import pl.goral.pages.QrPage;
-
-import static pl.goral.generators.UserGenerator.getRandomUser;
 
 public class LoggedInHeaderTest extends LoggedInSeleniumTest {
 
