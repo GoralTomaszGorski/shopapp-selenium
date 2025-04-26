@@ -4,7 +4,10 @@ package pl.goral.tests;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.goral.config.ConfigProvider;
+import pl.goral.http.interceptors.GetCartApi;
 import pl.goral.pages.ProductsPage;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProductTest extends LoggedInSeleniumTest {
 
@@ -15,15 +18,21 @@ public class ProductTest extends LoggedInSeleniumTest {
 
     @Test
     public void shouldAddProductToBasket() {
+        // given
         ProductsPage productsPage = new ProductsPage(driver);
+
+        // when
         int productIndex = productsPage
                 .verifyIsLoaded()
                 .addRandomProductToBasketAndReturnItsIndex();
 
-        productsPage
-                .verifyButtonsChanged(productIndex);
+        // then
+        String productName = productsPage.getProductName(productIndex);
+        productsPage.verifyProductCartUpdated(productIndex);
+        productsPage.getToast().verifyMessage("Added to cart", String.format("1 × %s added to your cart", productName));
+        productsPage.getLoggedInHeader().assertProductCountInBasket(1);
 
-        driver.quit();
+        assertThat(GetCartApi.getCurrentNumberOfItemsInCart(token)).isEqualTo(1);
     }
 
 }
