@@ -8,6 +8,8 @@ import pl.goral.pages.BasePage;
 import pl.goral.pages.LoginPage;
 import pl.goral.pages.ProfilePage;
 
+import static org.awaitility.Awaitility.await;
+
 public class LoggedInHeader extends BasePage {
 
     public LoggedInHeader(WebDriver driver) {
@@ -31,5 +33,13 @@ public class LoggedInHeader extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText(link)));
         driver.findElement(By.linkText(link)).click();
         return getInstance(expectedPage);
+    }
+
+    public void assertProductCountInBasket(int productCount) {
+        await().until(() ->
+                driver.findElement(By.cssSelector("[data-testid=desktop-cart-icon] span"))
+                        .getText()
+                        .equals(String.valueOf(productCount))
+        );
     }
 }
