@@ -3,7 +3,13 @@ package pl.goral.logging;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class InMemoryAppender extends AppenderBase<ILoggingEvent> {
+
+    private final List<String> logMessages = new ArrayList<>();
+    private static final int STACK_TRACE_LINE_LIMIT = 20;
 
     private final StringBuilder logBuilder = new StringBuilder();
 
@@ -23,5 +29,8 @@ public class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     public String getAllLogs() {
         return logBuilder.toString();
     }
+
+
+
 }
 
