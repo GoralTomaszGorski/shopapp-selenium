@@ -1,9 +1,8 @@
-package pl.goral.http.interceptors;
+package pl.goral.http;
 
 import lombok.SneakyThrows;
 import okhttp3.Request;
 import okhttp3.Response;
-import pl.goral.http.BaseApi;
 import pl.goral.http.dto.cart.CartResponseDto;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -4,7 +4,7 @@ package pl.goral.tests;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.goral.config.ConfigProvider;
-import pl.goral.http.interceptors.GetCartApi;
+import pl.goral.http.GetCartApi;
 import pl.goral.pages.ProductsPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
