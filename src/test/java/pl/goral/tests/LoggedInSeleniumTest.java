@@ -2,6 +2,7 @@ package pl.goral.tests;
 
 
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.JavascriptExecutor;
 import pl.goral.SeleniumTest;
 import pl.goral.config.ConfigProvider;
 import pl.goral.http.LoginApi;
@@ -23,7 +24,8 @@ public abstract class LoggedInSeleniumTest extends SeleniumTest {
         token = LoginApi.login(user.getUsername(), user.getPassword());
 
         driver.get(ConfigProvider.get("frontend.url"));
-        driver.executeScript("window.localStorage.setItem('token', arguments[0]);", token);
+        ((JavascriptExecutor) driver).executeScript("window.localStorage.setItem('token', arguments[0]);", token);
+
     }
 
 }
