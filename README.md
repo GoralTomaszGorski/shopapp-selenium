@@ -13,7 +13,7 @@ These tests ensure that key user flows work correctly and that the frontend and 
 - 🔁 **Frontend-Backend verification**: using OkHttp to validate API responses against frontend UI states  
 - 🧪 **End-to-End user simulation**: real user journeys from registration to profile and QR code access  
 - 📷 **Automatic screenshots** on test failure  
-- 🌐 **Cross-browser testing**: Chrome and Firefox via Selenium Grid in Docker  
+- 🌐 **Cross-browser testing**: Chrome, Edge and Firefox via Selenium Grid in Docker  
 - 📊 **Allure Reports**: rich test reporting with step-by-step logs  
 - 🔀 **Randomized test data** generation using [DataFaker](https://github.com/datafaker-net/datafaker)  
 - 🔎 **Detailed logs** using SLF4J + Logback  
