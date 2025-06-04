@@ -3,6 +3,7 @@
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Selenium](https://img.shields.io/badge/Selenium-4.30.0-brightgreen)
 ![Allure](https://img.shields.io/badge/Allure-2.20.1-purple)
+![JUnit 5](https://img.shields.io/badge/JUnit_5-5.9.3-red)
 
 This repository contains an automated **end-to-end test suite** for the full-stack web application **ShopApp**, written in **Java 21** using **Selenium WebDriver**, **JUnit 5**, and **Allure Reports**. It integrates **backend API testing via OkHttp** and performs **cross-browser testing** via **Selenium Grid**.
 
@@ -69,21 +70,22 @@ On UI failure, the test **automatically captures a screenshot** and attaches it 
 ```
 shopapp-selenium/
 ├── src/
-│ ├── main/
-│ │ └── java/
-│ │ └── com/
-│ │ └── shopapp/
-│ │ ├── config/
-│ │ ├── pages/
-│ │ ├── tests/
-│ │ └── utils/
-│ └── test/
-│ └── java/
-│ └── com/
-│ └── shopapp/
-│ └── tests/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── shopapp/
+│   │               ├── config/
+│   │               ├── pages/
+│   │               ├── tests/
+│   │               └── utils/
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── shopapp/
+│                   └── tests/
 ├── pom.xml
 └── README.md
+
 
 ```
 
@@ -202,4 +204,4 @@ Feel free to fork, open issues, or submit pull requests. Suggestions for improve
 
 ## 📃 License
 
-This project is open source and licensed under the MIT License.
+This project is open source and licensed under the [MIT License](LICENSE).
