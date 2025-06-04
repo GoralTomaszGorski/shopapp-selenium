@@ -1,5 +1,9 @@
 # ShopApp End-to-End Testing Suite
 
+![Java](https://img.shields.io/badge/Java-21-blue)
+![Selenium](https://img.shields.io/badge/Selenium-4.30.0-brightgreen)
+![Allure](https://img.shields.io/badge/Allure-2.20.1-purple)
+
 This repository contains an automated **end-to-end test suite** for the full-stack web application **ShopApp**, written in **Java 21** using **Selenium WebDriver**, **JUnit 5**, and **Allure Reports**. It integrates **backend API testing via OkHttp** and performs **cross-browser testing** via **Selenium Grid**.
 
 These tests ensure that key user flows work correctly and that the frontend and backend remain consistent.
@@ -65,13 +69,22 @@ On UI failure, the test **automatically captures a screenshot** and attaches it 
 ```
 shopapp-selenium/
 ├── src/
-│   ├── main/
-│   │   └── java/pl/goral/
-│   └── test/
-│       └── java/pl/goral/
-├── docker-compose.yml       # Selenium Grid config
-├── pom.xml                  # Maven dependencies
+│ ├── main/
+│ │ └── java/
+│ │ └── com/
+│ │ └── shopapp/
+│ │ ├── config/
+│ │ ├── pages/
+│ │ ├── tests/
+│ │ └── utils/
+│ └── test/
+│ └── java/
+│ └── com/
+│ └── shopapp/
+│ └── tests/
+├── pom.xml
 └── README.md
+
 ```
 
 ---
