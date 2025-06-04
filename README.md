@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="src\resources\ShopApp_Selenf.png" alt="ShopApp Selenium E2E Logo" width="300"/>
+</p>
+
 
 ## 🚀 Getting Started
 
